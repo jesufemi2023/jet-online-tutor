@@ -3,56 +3,52 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-10">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-400 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-400 rounded-full blur-[120px]" />
+    <section className="relative pt-24 pb-12 md:pt-44 md:pb-32 overflow-hidden px-4">
+      {/* Decorative background for mobile */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-10 pointer-events-none">
+        <div className="absolute top-[-10%] right-[-20%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-indigo-400 rounded-full blur-[80px] md:blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-20%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-emerald-400 rounded-full blur-[80px] md:blur-[120px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-sm font-semibold mb-8 animate-fade-in">
-          <span className="relative flex h-2 w-2 mr-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-          </span>
-          Specialized STEM Tutoring for Grade 7-12
+      <div className="max-w-7xl mx-auto text-center">
+        <div className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-[10px] md:text-sm font-bold mb-6 animate-fade-in uppercase tracking-wider">
+          Professional Maths & Science Mentorship
         </div>
-        <h1 className="text-5xl md:text-7xl font-serif font-bold text-slate-900 leading-[1.1] mb-6">
-          Empowering Students through <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-emerald-600">Excellence and Character.</span>
+        <h1 className="text-4xl md:text-7xl font-serif font-bold text-slate-900 leading-[1.1] mb-6 px-2">
+          Master School Lessons with <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-emerald-600 italic">Elite Personal Tutors.</span>
         </h1>
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 mb-10 leading-relaxed">
-          We bridge the gap between school lessons and true mastery. Expert online tutoring combined with academic counseling to build responsible, disciplined, and high-achieving individuals.
+        <p className="max-w-xl mx-auto text-base md:text-xl text-slate-600 mb-10 leading-relaxed px-4">
+          Register your child today. We assign our hand-picked, registered experts to bridge school learning gaps and build stellar character.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white rounded-full font-bold text-lg shadow-xl shadow-indigo-200 hover:bg-indigo-700 transition-all hover:-translate-y-1">
-            Book a Free Consultation
-          </button>
-          <button className="w-full sm:w-auto px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-full font-bold text-lg hover:bg-slate-50 transition-all">
-            Explore Tutors
-          </button>
+        
+        <div className="flex flex-col gap-4 max-w-sm mx-auto px-4">
+          <a href="#register" className="w-full px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold text-lg shadow-xl shadow-indigo-100 hover:bg-indigo-700 transition-all active:scale-[0.98]">
+            Start Enrollment
+          </a>
+          <p className="text-xs text-slate-400 font-medium">90% of students improve by 2 letter grades in 1 term</p>
         </div>
         
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto border-t border-slate-200 pt-12">
-          <div>
-            <div className="text-3xl font-bold text-slate-900">500+</div>
-            <div className="text-sm text-slate-500 uppercase tracking-widest font-semibold mt-1">Expert Tutors</div>
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto border-t border-slate-100 pt-10">
+          <div className="p-2">
+            <div className="text-2xl md:text-3xl font-bold text-slate-900">1-on-1</div>
+            <div className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">Personalized Focus</div>
           </div>
-          <div>
-            <div className="text-3xl font-bold text-slate-900">15k+</div>
-            <div className="text-sm text-slate-500 uppercase tracking-widest font-semibold mt-1">Students Help</div>
+          <div className="p-2">
+            <div className="text-2xl md:text-3xl font-bold text-slate-900">Verified</div>
+            <div className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">Registered Tutors</div>
           </div>
-          <div>
-            <div className="text-3xl font-bold text-slate-900">98%</div>
-            <div className="text-sm text-slate-500 uppercase tracking-widest font-semibold mt-1">Grade Improvement</div>
+          <div className="p-2">
+            <div className="text-2xl md:text-3xl font-bold text-slate-900">STEM</div>
+            <div className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">Specialized Lab</div>
           </div>
-          <div>
-            <div className="text-3xl font-bold text-slate-900">24/7</div>
-            <div className="text-sm text-slate-500 uppercase tracking-widest font-semibold mt-1">Support Available</div>
+          <div className="p-2">
+            <div className="text-2xl md:text-3xl font-bold text-slate-900">Counseling</div>
+            <div className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold mt-1">For Every Student</div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
