@@ -1,13 +1,21 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Lazy initialization function to ensure process.env.API_KEY is accessed safely
+function getAI() {
+  const apiKey = process.env.API_KEY;
+  if (!apiKey) {
+    throw new Error("API_KEY is not defined in process.env");
+  }
+  return new GoogleGenAI({ apiKey });
+}
 
 export async function getGuidanceRecommendation(
   subject: string, 
   challenge: string, 
   grade: string
 ) {
+  const ai = getAI();
   const response = await ai.models.generateContent({
     model: "gemini-3-flash-preview",
     contents: `As an academic counselor for a premium tutoring platform focusing on STEM and character building, provide a response to a parent whose child is struggling with ${subject} in ${grade}. 
@@ -29,6 +37,7 @@ export async function getGuidanceRecommendation(
 }
 
 export async function getSubjectPlan(subject: string, topic: string) {
+  const ai = getAI();
   const response = await ai.models.generateContent({
     model: "gemini-3-flash-preview",
     contents: `Create a 4-week reinforcement lesson plan for a student who needs help with ${topic} in the subject of ${subject}. 
