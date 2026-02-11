@@ -1,11 +1,11 @@
 
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import TutorList from './components/TutorList';
-import AIConsultant from './components/AIConsultant';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import Features from './components/Features.tsx';
+import TutorList from './components/TutorList.tsx';
+import AIConsultant from './components/AIConsultant.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (

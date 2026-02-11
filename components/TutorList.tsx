@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import TutorCard from './TutorCard';
-import { Tutor, Subject } from '../types';
+import TutorCard from './TutorCard.tsx';
+import { Tutor, Subject } from '../types.ts';
 
 const mockTutors: Tutor[] = [
   {

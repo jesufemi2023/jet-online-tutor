@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { getGuidanceRecommendation } from '../services/geminiService';
-import { Subject, Grade } from '../types';
+import { getGuidanceRecommendation } from '../services/geminiService.ts';
+import { Subject, Grade } from '../types.ts';
 
 const AIConsultant: React.FC = () => {
   const [subject, setSubject] = useState<Subject>(Subject.Math);
