@@ -1,0 +1,8 @@
+{
+  "name": "EduVanguard STEM & Mentorship",
+  "description": "A premium online tutoring platform for grades 7-12, focusing on STEM excellence, character development, and academic counseling.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
